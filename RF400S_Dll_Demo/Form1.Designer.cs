@@ -480,7 +480,7 @@
             // 
             // num_S50Writedata
             // 
-            this.num_S50Writedata.Location = new System.Drawing.Point(620, 135);
+            this.num_S50Writedata.Location = new System.Drawing.Point(663, 138);
             this.num_S50Writedata.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.num_S50Writedata.Maximum = new decimal(new int[] {
             255,

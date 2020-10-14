@@ -151,7 +151,7 @@ namespace RF400S_Dll_Demo
         int nDevHandle = -1;     //设备的句柄值
         int nPortType = 0; //0: USB, 1: comPort
 
-        //-----自动读卡的线程----------------------
+        //-----Automatic card reading thread----------------------
         Thread AutoReadThread;
         bool m_bThreadStart;
         
@@ -580,7 +580,7 @@ namespace RF400S_Dll_Demo
             byte nSector = System.Convert.ToByte(num_S50Sector.Value);
             byte nBlock = System.Convert.ToByte(num_S50Block.Value);
             int  Addres = 0;
-            //注意地址的计算方法
+            //Pay attention to how the address is calculated
             Addres = nSector * 4 + nBlock;
 
             byte[] BlockData;
@@ -643,12 +643,12 @@ namespace RF400S_Dll_Demo
             strSend = new byte[1000];
             strRecv = new byte[1000];
             byte nSector = System.Convert.ToByte(num_S50Sector.Value);
-            byte keyType = 0x30;    //这是设置成了默认值，界面中应该可以选择
-            
+            byte keyType = 0x30;    //This is set as the default value and should be selectable in the interface
+
 
             byte[] Key;
             Key = new byte[6];
-            //初始化写入的数据，写入同样的值
+            //Initialize the written data and write the same value
             for (int i = 0; i < 6; i++)
                 Key[i] = 0xFF;
 
